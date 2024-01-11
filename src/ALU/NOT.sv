@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 11.01.2024 14:38:10
+// Create Date: 11.01.2024 15:35:17
 // Design Name: 
-// Module Name: OR
+// Module Name: NOT
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,12 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module OR(
-    input  [31:0] A,
-    input  [31:0] B,
-    output  [31:0] result
-    );  
-    
-    assign result = A | B;
-    
+module NOT(
+    input [31:0]A,
+    output [31:0]result
+    );
+    assign result = ~A;
 endmodule

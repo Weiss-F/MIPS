@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 11.01.2024 14:38:10
+// Create Date: 11.01.2024 15:37:48
 // Design Name: 
-// Module Name: OR
+// Module Name: MUX2to1
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,12 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module OR(
-    input  [31:0] A,
-    input  [31:0] B,
-    output  [31:0] result
-    );  
-    
-    assign result = A | B;
-    
+module MUX2to1(
+    input [31:0]A,
+    input [31:0]B,
+    input select,
+    output [31:0]result
+    );
+    assign result = select ? A : B;
 endmodule

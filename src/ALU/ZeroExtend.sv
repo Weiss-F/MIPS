@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 11.01.2024 14:38:10
+// Create Date: 11.01.2024 15:36:28
 // Design Name: 
-// Module Name: OR
+// Module Name: ZeroExtend
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,12 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module OR(
-    input  [31:0] A,
-    input  [31:0] B,
-    output  [31:0] result
-    );  
-    
-    assign result = A | B;
-    
+module ZeroExtend(
+    input A,
+    output [31:0] result
+    );
+    assign result = {31'b0, A};
 endmodule

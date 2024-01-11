@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 11.01.2024 14:38:10
+// Create Date: 11.01.2024 15:35:45
 // Design Name: 
-// Module Name: OR
+// Module Name: ADD
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,12 +20,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module OR(
+module ADD(
     input  [31:0] A,
     input  [31:0] B,
+    input c_in,
     output  [31:0] result
     );  
     
-    assign result = A | B;
+    assign result = A + B + c_in;
     
 endmodule
