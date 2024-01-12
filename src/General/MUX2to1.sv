@@ -26,5 +26,5 @@ module MUX2to1(
     input select,
     output [31:0]result
     );
-    assign result = select ? A : B;
+    assign result = select ? B : A;
 endmodule
